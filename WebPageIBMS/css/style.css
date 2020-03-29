@@ -1,0 +1,209 @@
+
+html,body
+{
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica,Arial, sans-serif;
+  background-color: white;
+}
+
+.navbar
+{
+  background-color: rgba(122, 127, 136, 0.74);
+  padding: 1% 0;
+  font-size: 1.2m;
+}
+
+.navbar-brand
+{
+  min-height: 55px;
+  margin-bottom: 5px;
+  padding: 0px 15px 5px 5px;
+}
+
+.navbar-brand img
+{
+  width: 150px;
+}
+
+.navbar-default .navbar-nav li a
+{
+  color: #d5d5d5;
+}
+
+.navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a.active
+{
+  color: white;
+}
+
+#home
+{
+  background: url(../img/wallpaper.jpg) no-repeat center center fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.landing-text
+{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.landing-text h1, .landing-text h3
+{
+  color: white;
+}
+
+.landing-text h1
+{
+  font-size: 500%;
+  font-weight: 700;
+}
+
+.landing-text a
+{
+  background: #63810C;
+  color: white;
+}
+
+.landing-text a:hover
+{
+  background:rgb(108, 139, 13);
+  color: white;
+}
+
+#somos
+{
+  background-color: white;
+  background: linear-gradient(to top, #757F9A, #D7DDE8);
+}
+
+#somos h3
+{
+  color: #4C679F;
+}
+
+#about-us
+{
+  background-color: white;
+  background: linear-gradient(to bottom, rgb(115, 148, 14), #63810C); 
+  color: white;
+}
+
+
+.padding
+{
+  padding: 80px 0;
+}
+
+.padding img
+{
+  width: 100%;
+}
+
+#fixed
+{
+  background: url(../img/fixed.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 60%;
+  width: 100%;
+  position: relative;
+  filter: blur(1.6px);
+  background-size: cover;
+}
+
+#reuniones
+{
+  text-align: center;
+  vertical-align: middle;
+  background-color: white;
+}
+
+#reuniones h2
+{
+  color: #63810C;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 250%;
+  font-weight: 700;
+}
+
+#reuniones dl dd, #reuniones dl dt
+{
+  padding: 5px;
+  font-size: 120%;
+}
+
+.mapouter
+{
+  position:relative;
+  text-align:right;
+  height:500px;
+  width:600px;
+}
+
+.gmap_canvas 
+{
+  overflow:hidden;
+  background:none!important;
+  height:320px;
+  width:320px;
+}
+
+footer
+{
+  width: 100%;
+  background-color: #4C679F;
+  background: linear-gradient(to top, #32476D, #4C679F);
+  padding: 5% 5% 10% 5%;
+  color:white;
+}
+
+#contacto
+{
+  background-color: #63810C;
+  color: white;
+}
+
+#contacto a
+{
+  color: white;
+}
+
+.fa
+{
+  padding: 15px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.fa:hover
+{
+  color: #d5d5d5;
+  text-decoration: none;
+}
+
+@media(max-width: 768px)
+{
+
+  .navbar-brand img
+{
+  width: 120px;
+}
+
+  .landing-text h1
+  {
+    font-size: 300%;
+  }
+
+  .fa
+  {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+}
