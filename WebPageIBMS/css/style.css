@@ -141,22 +141,6 @@ html,body
   font-size: 120%;
 }
 
-.mapouter
-{
-  position:relative;
-  text-align:right;
-  height:500px;
-  width:600px;
-}
-
-.gmap_canvas 
-{
-  overflow:hidden;
-  background:none!important;
-  height:320px;
-  width:320px;
-}
-
 footer
 {
   width: 100%;
