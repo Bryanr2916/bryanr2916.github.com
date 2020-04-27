@@ -27,45 +27,7 @@ var cells=
 
 };
 
-var initialNumbre1, initialNumbre2;
-
-initialNumbre1= Math.floor(Math.random()*20)+1; //3*6.6666=20
-
-//sadfhaskjdfhk
-
-var position_1=new Array(2);
-var position_2=new Array(2);
-
-position_1[0]=Math.floor(Math.random()*4);
-position_1[1]=Math.floor(Math.random()*4);
-
-position_2[0]=Math.floor(Math.random()*4);
-position_2[1]=Math.floor(Math.random()*4);
-
-while(position_1[0]==position_2[0] && position_1[1]==position_2[1])
-{
-  position_2[0]=Math.floor(Math.random()*4);
-  position_2[1]=Math.floor(Math.random()*4);
-}
-
-position_1= (position_1[0]*10)+position_1[1];
-position_2= (position_2[0]*10)+position_2[1];
-
-console.log("Position 1: "+position_1);
-console.log("Position 2: "+position_2);
-
-var number=Math.floor(Math.random()*80)+1;
-var number2=Math.floor(Math.random()*80)+1;
-var isNumber1_4= number%12==0;
-var isNumber2_4=number2%24==0;
-
-cells[position_1].classList.remove('empty');
-cells[position_2].classList.remove('empty');
-
-cells[position_1].innerHTML=isNumber1_4?4:2;
-cells[position_2].innerHTML=isNumber2_4?4:2;
-
-  //nskahfkjdhfa
+var mainGrid=document.getElementById('main-grid');
 
 var teclas=
  {
@@ -75,25 +37,87 @@ var teclas=
  	RIGHT:39
  };
 
-var grid=new Array(4);
-
-for(var i=0; i<4;i++)
+var game=
 {
-  grid[i]= new Array(4);
+  puntaje:0,
+  tablero:newGrid()
 }
 
- var newGame=document.getElementById('new-game');
+startNewGame();
 
- newGame.style.cursor='pointer';
- newGame.onclick=startNewGame;
+var grid=newGrid();
+
+ var newGameButton=document.getElementById('new-game');
+
+ newGameButton.style.cursor='pointer';
+ newGameButton.onclick=startNewGame;
 
  document.addEventListener('keydown',move);
 
+ mainGrid.addEventListener('touchstart',touchStart);
+ mainGrid.addEventListener('touchmove',touchMove);
+ mainGrid.addEventListener('touchend',touchEnd);
+
  function startNewGame()
  {
-   alert('new game!');
- }
 
+  cleanGrid();
+
+  var position_1=new Array(2);
+  var position_2=new Array(2);
+
+  position_1[0]=randomGridPosition();
+  position_1[1]=randomGridPosition();
+
+  position_2[0]=randomGridPosition();
+  position_2[1]=randomGridPosition();
+
+  while(position_1[0]==position_2[0] && position_1[1]==position_2[1])
+  {
+    position_2[0]=randomGridPosition();
+    position_2[1]=randomGridPosition();
+  }
+
+  var sp_position_1= (position_1[0]*10)+position_1[1];
+  var sp_position_2= (position_2[0]*10)+position_2[1];
+
+  cells[sp_position_1].classList.remove('empty');
+  cells[sp_position_2].classList.remove('empty');
+
+  var randomNumber1=randomNumber(12);
+  var randomNumber2=randomNumber(24);
+
+  cells[sp_position_1].innerHTML=randomNumber1?4:2;
+  cells[sp_position_2].innerHTML=randomNumber2?4:2;
+
+  game.tablero[position_1[0]][position_1[1]]=randomNumber1?4:2;
+  game.tablero[position_2[0]][position_2[1]]=randomNumber2?4:2;
+} //function startGame
+
+ /**
+  * Detecta el inicio del touch
+  * @param {*} evento 
+  */
+
+  function touchStart(evento)
+  {
+    console.log("touch Start: "+evento);
+  }
+
+  /**
+  * Detecta el deslizamiento del touch
+  * @param {*} evento 
+  */
+
+  function touchMove(evento)
+  {
+    console.log("touch Move: "+evento);
+  }
+
+  function touchEnd(evento)
+  {
+    console.log("touch End: "+evento);
+  }
 
 
  /*
@@ -117,3 +141,77 @@ for(var i=0; i<4;i++)
 
 
  }
+
+ /**
+  * retorna un booleano para determinar si el número
+  * a generar será un 2 (si es falso)
+  * o un 4 (si es verdadero)
+  * @param {*} residuo 
+  */
+ function randomNumber(residuo)
+ {
+    var number=Math.floor(Math.random()*80)+1;
+    return number%residuo==0;
+ }
+
+ /*
+ Limpia el tablero
+ */
+ function cleanGrid(item,index,array)
+ {
+
+  game.tablero=newGrid();
+
+   for(var i=0;i<4;i++)
+   {
+     //primera fila
+
+     cells[(i*10)].classList.remove('empty');
+     cells[(i*10)].classList.add('empty');
+     cells[(i*10)].innerHTML='';
+
+     //segunda fila
+
+     cells[(i*10)+1].classList.remove('empty');
+     cells[(i*10)+1].classList.add('empty');
+     cells[(i*10)+1].innerHTML='';
+
+     //tercera fila
+
+     cells[(i*10)+2].classList.remove('empty');
+     cells[(i*10)+2].classList.add('empty');
+     cells[(i*10)+2].innerHTML='';
+
+     //cuarta fila
+
+     cells[(i*10)+3].classList.remove('empty');
+     cells[(i*10)+3].classList.add('empty');
+     cells[(i*10)+3].innerHTML='';
+   }
+
+   
+ }
+
+/*retorna un nuevo grid vacio*/
+ function newGrid()
+   {
+    var new_grid=new Array(4);
+
+    for(var i=0; i<4;i++)
+    {
+      new_grid[i]= new Array(4);
+      new_grid[i][0]=0;
+      new_grid[i][1]=0;
+      new_grid[i][2]=0;
+      new_grid[i][3]=0;
+    }
+
+    return new_grid;
+
+   }
+
+   function randomGridPosition()
+   {
+    return Math.floor(Math.random()*4);
+   }
+ 
