@@ -1,0 +1,78 @@
+.container
+{
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.12em;
+  background-color: aqua;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header
+{
+  margin: 15px opx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-grid
+{
+  margin:20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-score, .score, .new-game
+{
+  margin:20px;
+  padding: 8px;
+  background-color: darkgray;
+  border-radius: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.best-score h4, .score h4
+{
+  margin: 0.6em;
+}
+
+.new-game
+{
+  padding: 6px 12px;
+  margin:0px 6px 20px 6px;
+  background-color: darkgray;
+  border-radius: 12%;
+}
+
+.main-grid
+{
+  width: 360px;
+  height: 360px;
+  margin: 20px;
+  padding:4px;
+  background-color: darkgray;
+  border-radius: 12%;
+  table-layout: fixed;
+}
+
+.number
+{
+  background-color: white;
+  border-radius: 12%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.empty
+{
+  height:1.5em ;
+  background-color: rgb(207, 204, 204);
+}
