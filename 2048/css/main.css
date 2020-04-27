@@ -3,7 +3,7 @@
   font-family: 'Special Elite', cursive;
   letter-spacing: 0.12em;
   background-color: aqua;
-  margin: 0;
+  margin: 0 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,8 +54,8 @@
 
 .main-grid
 {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   margin: 20px;
   padding:4px;
   background-color: darkgray;

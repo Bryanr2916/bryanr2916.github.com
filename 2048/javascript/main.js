@@ -105,6 +105,7 @@ for(var i=0; i<4;i++)
    switch(evento.keyCode)
    {
      case teclas.UP:
+       alert('ouch!!!');
       break;
      case teclas.DOWN:
       break;
