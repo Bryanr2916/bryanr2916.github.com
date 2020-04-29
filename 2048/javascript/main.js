@@ -166,6 +166,8 @@ function swipe()
 
   if(xDifference>yDifference && xDifference>50)
   {
+    game.moved=false;
+
     if(touchCoordinate.startX>touchCoordinate.endX)
     {
       left();
@@ -179,6 +181,9 @@ function swipe()
   }
   else if( yDifference>50)
   {
+
+    game.moved=false;
+
     if(touchCoordinate.startY>touchCoordinate.endY)
     {
       up();
