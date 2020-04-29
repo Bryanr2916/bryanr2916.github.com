@@ -52,6 +52,13 @@
   border-radius: 12%;
 }
 
+.new-game:hover
+{
+  font-size: 1.04em;
+  margin:0px 6px 18px 6px;
+  background-color: rgb(163, 160, 160);
+}
+
 .main-grid
 {
   width: 340px;
@@ -66,7 +73,7 @@
 .number
 {
   height:1.5em ;
-  background-color: white;
+  background-color: #F9F2F8;
   border-radius: 12%;
   font-size: 1.5em;
   text-align: center;
@@ -74,5 +81,100 @@
 
 .empty
 {
-  background-color: rgb(207, 204, 204);
+  background-color: #cfcccc;
 }
+
+.twoPowThree
+{ 
+  background-color: #E0BCDB;
+}
+
+.twoPowFour
+{
+  background-color: #d6a8d0;
+}
+
+.twoPowFive
+{
+  background-color: #CE97C7;
+}
+
+.twoPowSix
+{
+  background-color: #c685bd;
+}
+
+.twoPowSeven
+{
+  background-color: #b663aa;
+  color: white;
+}
+
+.twoPowEight
+{
+  background-color: #A9569E;
+  color: white;
+}
+
+.twoPowNine
+{
+  background-color: #9c4991;
+  color: white;
+}
+
+.twoPowTen
+{
+  background-color: #7a3971;
+  color: white;
+}
+
+.twoPowEleven
+{
+  background-color: #BA2C61;
+  color: white;
+}
+
+.twoPowTwelve
+{
+  background-color: #DA2559;
+  color: white;
+}
+
+.twoPowThirteen
+{
+  background-color: #fa1e51;
+  color:white;
+}
+
+.twoPowFourteen
+{
+  background-color: #fb5078;
+  color:white;
+  font-size: 1.3em;
+  height:1.5em ;
+}
+
+.twoPowFifteen
+{
+  background-color: #FC698C;
+  color:white;
+  font-size: 1.2em;
+  height:1.5em ;
+}
+
+.twoPowSixteen
+{
+  background-color: #fc829f;
+  color:white;
+  font-size: 1.2em;
+  height:1.5em ;
+}
+
+.twoPowSeventeen
+{
+  background-color: #FD9BB2;
+  color:white;
+  font-size: 1.18em;
+  height:1.5em ;
+}
+
