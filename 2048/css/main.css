@@ -1,8 +1,13 @@
+html
+{
+  background: #3a6186;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .container
 {
   font-family: 'Special Elite', cursive;
   letter-spacing: 0.12em;
-  background-color: aqua;
   margin: 0 6px;
   display: flex;
   flex-direction: column;
@@ -12,7 +17,7 @@
 
 .header
 {
-  margin: 15px opx;
+  margin: 8px opx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,9 +32,14 @@
   align-items: center;
 }
 
+.score-grid h1
+{
+  color:white;
+}
+
 .best-score, .score, .new-game
 {
-  margin:20px;
+  margin:8px 12px;
   padding: 8px;
   background-color: darkgray;
   border-radius: 12%;
@@ -41,13 +51,13 @@
 
 .best-score h4, .score h4
 {
-  margin: 0.6em;
+  margin: 0.5em;
 }
 
 .new-game
 {
   padding: 6px 12px;
-  margin:0px 6px 20px 6px;
+  margin:0px 6px 2px 2px;
   background-color: darkgray;
   border-radius: 12%;
 }
@@ -55,14 +65,14 @@
 .new-game:hover
 {
   font-size: 1.04em;
-  margin:0px 6px 18px 6px;
+  margin:0px 6px 0px 2px;
   background-color: rgb(163, 160, 160);
 }
 
 .main-grid
 {
-  width: 340px;
-  height: 340px;
+  width: 380px;
+  height: 380px;
   margin: 20px;
   padding:4px;
   background-color: darkgray;
