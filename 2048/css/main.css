@@ -68,6 +68,7 @@
   background-color: darkgray;
   border-radius: 12%;
   table-layout: fixed;
+  border-spacing: .47em;
 }
 
 .number

@@ -69,7 +69,6 @@ document.addEventListener('keydown',move);
 mainGrid.addEventListener('touchstart',touchStart);
 mainGrid.addEventListener('touchmove',touchMove);
 mainGrid.addEventListener('touchend',touchEnd);
-var test;
 
 function startNewGame()
 {
@@ -96,7 +95,7 @@ function startNewGame()
   var randomNumber1=randomNumber(12);
   var randomNumber2=randomNumber(24);
 
-  game.board[position_1[0]][position_1[1]]=Math.pow(2,1);
+  //game.board[position_1[0]][position_1[1]]=Math.pow(2,1);
   game.board[position_1[0]][position_1[1]]=randomNumber1?game.bigNumber:game.normalNumber;
   game.board[position_2[0]][position_2[1]]=randomNumber2?game.bigNumber:game.normalNumber;
 
@@ -300,7 +299,7 @@ function refresh(animated)
           break;    
         case Math.pow(game.normalNumber,11):
           cell.className="";
-          cell.className="number twoPowEleven"
+          cell.className= "number twoPowEleven "
           break;   
         case Math.pow(game.normalNumber,12):
           cell.className="";
@@ -395,7 +394,7 @@ function generateNumberOnEmptyGrid()
 
     }while(game.board[ gn_position[0] ] [ gn_position[1] ]!=0);
 
-    game.board[ gn_position[0] ] [ gn_position[1] ]= randomNumber(12)?4:2;
+    game.board[ gn_position[0] ] [ gn_position[1] ]= randomNumber(12)?game.bigNumber:game.normalNumber;
     
     refresh(gn_position);
 
@@ -432,8 +431,10 @@ function right()
     {
       if(final_row[e]==final_row[e+1])
       {
+
         final_row[e]*=2;
         game.score+=final_row[e];
+
         final_row[e+1]=0;
       }
       else
@@ -498,6 +499,7 @@ function left()
       if(final_row[e]==final_row[e+1])
       {
         final_row[e]*=2;
+
         game.score+=final_row[e];
         final_row[e+1]=0;
       }
@@ -565,6 +567,7 @@ function up()
       {
         final_row[e]*=2;
         game.score+=final_row[e];
+
         final_row[e+1]=0;
       }
       else
@@ -636,6 +639,7 @@ function down()
       {
         final_row[e]*=2;
         game.score+=final_row[e];
+
         final_row[e+1]=0;
       }
       else
