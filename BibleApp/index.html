@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+  <head>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/img/ic_launcher_round.ico" type="image/x-icon"/>
+    <title>Biblia App</title>
+  </head>
+  <body class="index">
+    <header>
+      <div class="container">
+        <h1>
+          <a class="flex" href="#">
+            <span class="logo" title="IBMS">IBMS</span>
+            <span>Biblia App</span>
+          </a>
+        </h1>
+      </div>
+    </header>
+    <div class="subheader">
+      <div class="container flex">
+        <div class="subheadings">
+          <h2>Viendo:</h2>
+          <h3 id="viewing"></h3>
+        </div>
+        <div class="search-area flex">
+          <button onclick="searchButton()">🔎</button>
+          <input type="text" id="search-input" placeholder="Ejem. 'Juan 3:16-19' o 'reino'"
+            size="30" onkeydown = "if (event.keyCode == 13) searchButton()" >
+        </div>
+      </div>
+    </div>
+    <div class="container crumbs">
+      <div id="breadcrumbs"></div>
+    </div>
+    <main class="container">
+      <h4 class="list-heading"><span>Selecciona un Libro</span></h4>
+      <div id="book-list" class="list-container"></div>
+    </main>
+    <script src="javascript/my_key.js"></script>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
