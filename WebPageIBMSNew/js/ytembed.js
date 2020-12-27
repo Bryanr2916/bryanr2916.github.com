@@ -409,7 +409,7 @@ var ytEmbed = {
 
         var iframe = document.createElement('iframe');
         iframe.setAttribute('id', cfg.block + 'Player');
-        iframe.setAttribute('width', cfg.width);
+        iframe.setAttribute('width','100%');
         iframe.setAttribute('height', cfg.height);
         iframe.setAttribute('frameBorder', '0');
         iframe.setAttribute('src', 'https://www.youtube.com/embed/' + ytPlayerParams.videoId + '?autoplay=' + ytPlayerParams.autoplay + '&modestbranding=1'); //controlbar set
